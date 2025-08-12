@@ -1,4 +1,4 @@
-Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm
+#Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm
 
 The goal of the project is to find a minimum spanning tree for a graph built on coordinate points of a real world city and find the least possible time complexity optimisations to do it. I used a KNN filter as recommneded in the research paper "Fast and Memory-Efficient Approximate Minimum Spanning Tree" by Mahmood K. M. Almansoori, Andras Meszaros and Miklos Telek. The K nearest neighbour filter prunes the graph  and then running the prim's turns into a more managable O(n*k*log(n)) time complexity, if we manage to keep a low value for k then the time complexity will be drastically reduced comapred to the O(n*n*log(n)) given by vanilla prim's. I use two types of graphs, Dense and sparse. sparse graphs have very few edges and as we increase the number of edges to every vertex has an edge to every other vertex we move to a fully dense graph. Below are the time measuerments while running the program in a 16 gb ram and an intel i9 laptop.
 
@@ -36,7 +36,9 @@ prim's MST clocks at 0.11928176879882812 secs
  
  
 nodes:49502 dense_edges:122519925
-# Out of memory error*
+*__________Out of memory error*
+
+###############################################################################
 
 
 RESULT: The prim's running on knn pruned dense graphs give an increasingly widening runtime with the dataset.
