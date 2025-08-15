@@ -61,6 +61,7 @@ nodes:49502 dense_edges:122519925
 
 # Result:
 The prim's running on KNN pruned dense graphs give an increasingly widening runtime when compared to the vanilla prim's.
+Making the graph dense will result in the shortest paths to all vertices at the cost of efficiency, but using KNN to prune reduces the runtime drastically.
 
 The program eventually runs out of RAM due to it having to store a huge number of nodes and its adjacency matrix. There is another interesting find, when running a just large enough dataset the machine tries to push through the computing even if it's out of memory and writing it to a disk. This results in KNN prim's taking longer time than the vanilla prim's.
 
