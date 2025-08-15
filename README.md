@@ -15,7 +15,8 @@ The goal of the project is to find a minimum spanning tree for a graph built on 
 
 
 
-
+The initial dataset is given by the osmnx library , the dataset consists of geormetries and excessive datapoints we wont need. We reduce the geometries into centeroid datapoints and the remove any unessecary datapoints.
+This will give us a sparse graph. The dense grapgh derived by connecting edges from a node to every other node in the graph (E*(E-1) edges if we have a grapgh G=(V,E). 
 
 
 
@@ -65,9 +66,15 @@ nodes:49502 dense_edges:122519925
 # Result:
 The prim's running on knn pruned dense graphs give an increasingly widening runtime when compared to the vanilla prim's.
 
-
 The program evetually runs out of ram due to it having to store huge number of nodes and its adjacency martrix. There is another intersiting find, when running a just large enough dataset the machine tries to push through the computing even if its out of memory and writing it to a disk. This results in knn prim's taking longer time than the vanilla prim's.
 
+# Citations
+References
+[1] M. K. M. Almansoori, A. Meszaros, and M. Telek, “Fast and memory-efficient approximate
+minimum spanning tree generation for large datasets,” Arabian Journal for Science and Engineering, vol. 50, pp. 1233–1246, 2025. doi: 10.1007/s13369-024-08974-y.
+[2] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, Introduction to Algorithms, 4th ed.
+Cambridge, MA, USA: The MIT Press, 2022.
+[3] G. Boeing, “Modeling and Analyzing Urban Networks and Amenities with OSMnx,” *Geographical Analysis*, early access, 2025. 10.1111/gean.70009.
 
 
 # Note:
