@@ -9,7 +9,7 @@ The goal of the project is to find a minimum spanning tree for a graph built on 
 ![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/dataset.png?raw=true)
 ![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/Prim's-MST-on-sparse-graph-filtered-with-knn.png?raw=true)
 
-![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/desnsedataset.png?raw=true)
+![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/densedataset.png?raw=true)
 ![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/Prim's-MST-on-dense-graph-filtered-with-knn.png?raw=true)
 
 
