@@ -1,6 +1,6 @@
 # Minimum Cost Optical Fiber Routing with Prim's Algorithm
 
-The goal of the project is to find a minimum spanning tree for a graph built on coordinate points of a real world city and find the least possible time complexity optimisations to do it. I used a KNN filter as recommneded in the research paper "Fast and Memory-Efficient Approximate Minimum Spanning Tree" by Mahmood K. M. Almansoori, Andras Meszaros and Miklos Telek. The K nearest neighbour filter prunes the graph  and then running the prim's turns into a more managable O(n*k*log(n)) time complexity, if we manage to keep a low value for k then the time complexity will be drastically reduced comapred to the O(n*n*log(n)) given by vanilla prim's. I use two types of graphs, Dense and sparse. sparse graphs have very few edges and as we increase the number of edges to every vertex has an edge to every other vertex we move to a fully dense graph. Below are the time measuerments while running the program in a 16 gb ram and an intel i9 laptop.
+The goal of the project is to find a minimum spanning tree for a graph built on coordinate points of a real world city and find the least possible time complexity optimizations to do it. I used a KNN filter as recommended in the research paper "Fast and Memory-Efficient Approximate Minimum Spanning Tree" by Mahmood K. M. Almansoori, Andras Meszaros and Miklos Telek. The K nearest neighbour filter prunes the graph and then running the prim's turns into a more manageable O(nklog(n)) time complexity, if we manage to keep a low value for k then the time complexity will be drastically reduced compared to the O(nnlog(n)) given by vanilla prim's. I use two types of graphs, Dense and sparse. Sparse graphs have very few edges and as we increase the number of edges so every vertex has an edge to every other vertex we move to a fully dense graph. Below are the time measurements while running the program in a 16 GB RAM and an Intel i9 laptop.
 
 
 
@@ -12,12 +12,8 @@ The goal of the project is to find a minimum spanning tree for a graph built on 
 ![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/densedataset.png?raw=true)
 ![alt text](https://github.com/NithishBhat/Minimum-Cost-Optical-Fiber-Routing-with-Prim-s-Algorithm/blob/main/Prim's-MST-on-dense-graph-filtered-with-knn.png?raw=true)
 
-
-
-
-The initial dataset is given by the osmnx library , the dataset consists of geormetries and excessive datapoints we wont need. We reduce the geometries into centeroid datapoints and the remove any unessecary datapoints.
-This will give us a sparse graph. The dense grapgh derived by connecting edges from a node to every other node in the graph (E*(E-1) edges if we have a grapgh G=(V,E). 
-
+The initial dataset is given by the osmnx library, the dataset consists of geometries and excessive datapoints we won’t need. We reduce the geometries into centroid datapoints and then remove any unnecessary datapoints.
+This will give us a sparse graph. The dense graph is derived by connecting edges from a node to every other node in the graph (E*(E-1) edges if we have a graph G=(V,E)).
 
 
 
@@ -64,9 +60,9 @@ nodes:49502 dense_edges:122519925
 
 
 # Result:
-The prim's running on knn pruned dense graphs give an increasingly widening runtime when compared to the vanilla prim's.
+The prim's running on KNN pruned dense graphs give an increasingly widening runtime when compared to the vanilla prim's.
 
-The program evetually runs out of ram due to it having to store huge number of nodes and its adjacency martrix. There is another intersiting find, when running a just large enough dataset the machine tries to push through the computing even if its out of memory and writing it to a disk. This results in knn prim's taking longer time than the vanilla prim's.
+The program eventually runs out of RAM due to it having to store a huge number of nodes and its adjacency matrix. There is another interesting find, when running a just large enough dataset the machine tries to push through the computing even if it's out of memory and writing it to a disk. This results in KNN prim's taking longer time than the vanilla prim's.
 
 # Citations
 References
@@ -78,4 +74,4 @@ Cambridge, MA, USA: The MIT Press, 2022.
 
 
 # Note:
-This project was a part of  Northeastern's MSCS CS5800. its was a group project , but i am going to include the part of the project i was responsible for. That is the coding  of prims and runtime measurements. The overall project was to find the Minimum-Cost-Optical-Fiber-Routing with 2 different algorithms and then comapre the efficiences of them both and the accuracy of the final minimum spanning tree. we were given 2 weeks to complete the project. but i had to get it done in one week to meet the testing and documentation deadline.
+This project was a part of Northeastern's MSCS CS5800. It was a group project, but I am going to include the part of the project I was responsible for. That is the coding of Prim's and runtime measurements. The overall project was to find the Minimum-Cost-Optical-Fiber-Routing with 2 different algorithms and then compare the efficiencies of them both and the accuracy of the final minimum spanning tree. We were given 2 weeks to complete the project, but I had to get it done in one week to meet the testing and documentation deadline.
